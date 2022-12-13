@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Roboto&display=swap');
+
+/* root styling */
+
+:root{
+    --light : #ff5700;
+    --secondary: #131418;
+    --dark: #131418;
+    --primary-color: #131418;
+    --secondary-color: #424346;
+    --border : #e9ecef;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* global styling */
+.text-light{
+    color: var(--light);
+}
+
+.text-secondary{
+    color: var(--secondary);
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.text-primary{
+    color: var(--primary-color);
+}
+
+.bg-light{
+    background-color: var(--light);
+}
+
+.container{
+    max-width: 1200px;
+    padding: 1px;
+    margin: auto;
+}
+
+.img-fluid{
+    width: 100%;
+}
+
+.text-title{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+.secondary-title{
+    font-family: 'Poppins' , sans-serif;
+}
+
+.display-1{
+    font-size: 22px;
+}
+
+.display-2{
+    font-size: 16px;
+}
+
+.display-3{
+    font-size: 14px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.btn{
+    padding: 15px 20px;
+    border: none;
+}
+
+.btn-primary{
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+}
+
+.object-fit{
+    max-height: 120px;
+    height: 80px;
+    width: 80px;
+    object-fit: fill;
+}
+
+.d-flex{
+    display: flex;   
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.mt-2{
+    margin-top: 10px;
+}
+
+.mt-3{
+    margin-top: 50px;
+}
+
+.mb-3{
+    margin-bottom: 30px;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.px-1{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.px-2{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.py-1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.py-2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-3{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.rounded{
+    height: 120px;
+    width: 120px;
+    object-fit: fill;
+    border-radius: 99px;
+}
+
+.shadow{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+/* section styling */
+ 
+/* ------- Navigation Menu ---------- */
+.navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-brand{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    font-size: 32px;
+}
+
+.collapse{
+    align-self: center;
+}
+
+.nav-link{
+    font-size: 14px;
+    margin: 12px;
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:hover{
+    color: var(--primary-color);
+}
+
+.search-box{
+    display: inline;
+    border-right: 1px solid var(--secondary);
+    padding-right: 12px;
+    margin-right: 10px;
+}
+
+.toggle-button{
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin: 8px 10px;
+    display: none;
+    color: white;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+
+
+.footer-title{
+    padding-top: 20px;
+    
+}
+
+.secondary-title{
+    text-align: center;
+    
+}
+
+.tags{
+    text-align: center;
+    padding-right: 20px;
+}
+
+
+.copyrights{
+    padding-bottom: 10px;
+}
+
+
+
+
+@media (max-width : 992px){
+    .navbar{
+        flex-direction: column;
+    }
+
+    #site-main{
+        margin-top: 14em;
+    }
+
+
+}
+
+@media (max-width : 1070px){
+    .grid .grid-item{
+        width: calc(50% - 20px);
+    }
+
+    .col-3{
+        flex: 0 0 100%;
+        max-width: calc(100% - 50px);
+        padding-top: 40px 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width : 574px){
+    .toggle-button{
+        display: initial;
+    }
+
+    .collapse{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.51,-0.15, 0, 0.98);
+    }
+
+    .collapse .nav-link{
+        display: block;
+        text-align: center;
+    }
+
+    .search-box{
+        border-right: none;
+    }
+
+    .collapse-toggle{
+        max-height: 500px;
+    }
+
+    .grid .grid-item{
+        width: calc(100% - 20px);
+    }
+
+    #site-main{
+        margin-top: 6em;
+    }
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/* Header all css */
+
+
+
+
+
+
+
+
+/* Mobile Responsive design all the css */
+@media only screen and (max-width: 1070px){
+
+
+.slider {
+    background-position: center !important;
+}
+.slider .cover .caption {
+    width: 100% !important;
+}    
+.slider .cover .caption p {
+    font-size: 15px !important;
+}
+.slider .cover .caption a {
+    padding: 10px 10px !important;
+    font-size: 16px !important;
+}
+
+.personalities-section .row {
+    display: block !important;
+}
+.personalities-section .row .column-item-1 {
+    width: 100% !important;
+}
+.personalities-section .row .column .image {
+    text-align: center;
+}
+.personalities-section .heading {
+    font-size: 20px !important;
+}
+
+.personalities-section .heading p {
+    font-size: 15px !important;
+    padding-top: 15px;
+}
+
+.personalities-section .row .column .details h4 {
+    font-size: 18px !important;
+}
+.personalities-section .row .column .details p {
+    font-size: 16px !important;
+}
+
+}
+
+/* about */
+.personalities-section{
+    width: 100%;
+}
+.personalities-section .heading{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding:20px;
+}
+.personalities-section .row{
+    display: flex;
+    justify-content: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.personalities-section .row .column-item-1{
+    width: 100%;
+    
+   
+}
+
+.what{
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.what h4{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.what p {
+    text-align: left;
+}
+.personalities-section .row .column img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.personalities-section .row .column .details{
+    padding: 10px;
+}
+.personalities-section .row .column .details h4{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    margin:10px 0px;
+}
+.personalities-section .row .column .details p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+
+
+
+/* Slider Section all css */
+.slider{
+    width: 100%;
+    height: 600px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+}
+.slider .cover{
+    width: 100%;
+    height: 600px;
+    background: rgba(0,0,0,0.6);
+}
+.slider .cover .caption{
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 200px;
+    text-align: center;
+}
+.slider .cover .caption h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+.slider .cover .caption h2{
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.slider .cover .caption p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.main__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #000000 0%, #000000 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to top, #9021ff 0%, #3e28e2 100%);
+    transition: all 0.4s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
+}
+
+.main__btn:hover::after{
+    width: 100%;
+}
+
+.section{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.banner .car-section .header{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 1s;
+
+}
+.banner .car-section nav{
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+.banner .car-section .logo{
+    width: 320px;
+    cursor: pointer;
+
+}
+.banner .car-section nav ul{
+    flex: 1;
+    text-align: center;
+
+}
+.banner .car-section nav ul li{
+    display: inline-block;
+    margin:  10px 20px;
+
+}
+.banner .car-section nav ul li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.banner .car-section nav .btn{
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-right: 7%;
+
+}
+.banner .car-section .info{
+    width: 100%;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    bottom: 50px;
+    left: 0;
+    margin-top: 400px;
+    position: absolute;
+}
+.banner .car-section .info div{
+    margin: 0 20px;
+    
+
+}
+.banner .car-section .info div h2{
+    font-size: 44px;
+    font-weight: 400;
+
+}
+.banner .car-section .info .line{
+    background: #fff;
+    height: 4px;
+    width: 100px;
+
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner .imgBx {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.banner .imgBx img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+    background-position: center;
+}
+
+.banner .imgBx img.active {
+    opacity: 1;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    width: 80px;
+
+}
+
+.controls li {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.controls li:hover {
+    background: #ffeb3b
+}
+.controls li:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #111;
+    border-bottom: 3px solid #111;
+    transform: rotate(45deg);
+}
+
+.controls li:nth-child(2):before{
+    transform: rotate(225deg);
+}
+
+.contentBx{
+    position: absolute;
+    border: 0;
+    max-width: 700px;
+}
+
+.contentBx div{
+    display: none;
+}
+
+.contentBx div.active{
+    display: block;
+    padding-left: 24px;
+    margin-left: 100px;
+    background: rgba(0,0,0,0.2);
+
+
+}
+
+.contentBx div h2{
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 4px;
+    padding-top: 10px;
+    
+}
+
+.contentBx div p{
+    color: #fff;
+    font-size: em;
+    margin-bottom: 1px;
+    margin-top: 10px;
+
+}
+
+.contentBx div a{
+    color: #111;
+    font-size: 1.1em;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    font-weight: 550;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.swiper {
+    margin-top: 1px;
+    width: 100%;
+    height: 80%;
+  }
+
+.swiper-slide img{
+    width: 100%;
+
+}
+
+.personalities-section .heading{
+    letter-spacing: 1px;
+}
+
+.personalities-section .heading p{
+    margin-top  : -35px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.navbar-nav2{background-color: #ff5700;
+    width: 100%;
+    left: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align:left;
+  }
+  
+  
+  .navbar-nav2 a{
+    
+    margin: 12px;
+    color: #0F0503;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+  }
+  
+  .navbar-nav2:hover{
+    color: #4E2EA9;
+  }
+  
